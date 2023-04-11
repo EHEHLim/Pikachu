@@ -41,13 +41,13 @@ public class GameManager : MonoBehaviour
         //단순히 public Text AText 하고 인스펙터 창에서 드래그&드랍으로 할 시 찾지를 못함 - NULLREFERENCE ERROR
         //게임 정보 초기화
         player1Score = player2Score = 0;//변수 초기화
-        ball.transform.position = new Vector3(-9f,7.5f,0);
         Round = 1;
         AText.text = $"player1 Score:{player1Score.ToString()}";
         BText.text = $"player2 Score:{player2Score.ToString()}";
         RoundT.text = $"Round {Round.ToString()}";
         GameSet = false;
         EndT.text = "";
+        ball.transform.position = new Vector3(-9f, 7.5f, 0);
         yield return null;
     }
     public void SetAText()//플레이어1의 득점
